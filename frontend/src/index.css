@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+    --color-slate-900: #0f172a;
+    --color-slate-950: #020617;
+
+    /* Gamification Colors */
+    --color-neon-blue: #00f3ff;
+    --color-neon-purple: #bc13fe;
+    --color-success: #0df2c9;
+}
+
+@layer base {
+    body {
+        background-color: var(--color-slate-950);
+        color: #f8fafc;
+        /* Slate-50 */
+        font-family: 'Inter', sans-serif;
+    }
+}
+
+/* Animations */
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+    }
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s infinite;
+}
